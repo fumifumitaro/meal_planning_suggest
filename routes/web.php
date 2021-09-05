@@ -22,3 +22,5 @@ Route::get('/')->uses([HomeController::class, 'index']);
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return Inertia::render('Dashboard');
 })->name('dashboard');
+
+Route::get('my_page/edit')->uses([\App\Http\Controllers\MyPage\EditController::class, 'index']);
